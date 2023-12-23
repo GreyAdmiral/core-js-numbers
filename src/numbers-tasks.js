@@ -19,7 +19,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(w, h) {
-   return w * h;
+  return w * h;
 }
 
 /**
@@ -34,7 +34,7 @@ function getRectangleArea(w, h) {
  *   0    => 0
  */
 function getCircleCircumference(r) {
-   return Math.PI * r * 2;
+  return Math.PI * r * 2;
 }
 
 /**
@@ -50,7 +50,7 @@ function getCircleCircumference(r) {
  *  -3, 3  => 0
  */
 function getAverage(v1, v2) {
-   return v1 / 2 + v2 / 2;
+  return v1 / 2 + v2 / 2;
 }
 
 /**
@@ -69,7 +69,7 @@ function getAverage(v1, v2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -85,7 +85,7 @@ function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-   return a !== 0 ? (-1 * b) / a : 0;
+  return a !== 0 ? (-1 * b) / a : 0;
 }
 
 /**
@@ -106,7 +106,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  */
 function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -123,7 +123,7 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     0     => 0
  */
 function getLastDigit(v) {
-   return v % 10;
+  return v % 10;
 }
 
 /**
@@ -138,7 +138,7 @@ function getLastDigit(v) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(v) {
-   return +v;
+  return +v;
 }
 
 /**
@@ -155,7 +155,7 @@ function parseNumberFromString(v) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelepipedDiagonal(a, b, c) {
-   return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 /**
@@ -176,13 +176,13 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(n, p) {
-   let t = n;
+  let t = n;
 
-   for (let i = 0; i <= p; i += 1) {
-      t = Math.round(t / 10 ** i) * 10 ** i;
-   }
+  for (let i = 0; i <= p; i += 1) {
+    t = Math.round(t / 10 ** i) * 10 ** i;
+  }
 
-   return t;
+  return t;
 }
 
 /**
@@ -203,16 +203,16 @@ function roundToPowerOfTen(n, p) {
  *   17 => true
  */
 function isPrime(n) {
-   let isPrimeNum = true;
+  let isPrimeNum = true;
 
-   for (let i = 2; i < n; i += 1) {
-      if (!(n % i)) {
-         isPrimeNum = false;
-         break;
-      }
-   }
+  for (let i = 2; i < n; i += 1) {
+    if (!(n % i)) {
+      isPrimeNum = false;
+      break;
+    }
+  }
 
-   return isPrimeNum;
+  return isPrimeNum;
 }
 
 /**
@@ -231,7 +231,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(v, d) {
-   return Number.isNaN(+v) ? d : +v;
+  return Number.isNaN(+v) ? d : +v;
 }
 
 /**
@@ -246,7 +246,7 @@ function toNumber(v, d) {
  *   0  => 0
  */
 function getCube(n) {
-   return n ** 3;
+  return n ** 3;
 }
 
 /**
@@ -263,17 +263,17 @@ function getCube(n) {
  *   10 => 55
  */
 function getFibonacciNumber(n) {
-   let a = 0;
-   let b = 1;
-   let res = n;
+  let a = 0;
+  let b = 1;
+  let res = n;
 
-   for (let i = 2; i <= n; i += 1) {
-      res = a + b;
-      a = b;
-      b = res;
-   }
+  for (let i = 2; i <= n; i += 1) {
+    res = a + b;
+    a = b;
+    b = res;
+  }
 
-   return res;
+  return res;
 }
 
 /**
@@ -288,13 +288,13 @@ function getFibonacciNumber(n) {
  *   1  => 1
  */
 function getSumToN(n) {
-   let sum = 0;
+  let sum = 0;
 
-   for (let i = 0; i <= n; i += 1) {
-      sum += i;
-   }
+  for (let i = 0; i <= n; i += 1) {
+    sum += i;
+  }
 
-   return sum;
+  return sum;
 }
 
 /**
@@ -309,13 +309,13 @@ function getSumToN(n) {
  *   5   => 5  // 5
  */
 function getSumOfDigits(n) {
-   let res = 0;
+  let res = 0;
 
-   `${n}`.split('').forEach((it) => {
-      res += +it;
-   });
+  `${n}`.split('').forEach((it) => {
+    res += +it;
+  });
 
-   return res;
+  return res;
 }
 
 /**
@@ -330,7 +330,7 @@ function getSumOfDigits(n) {
  *   15  => false
  */
 function isPowerOfTwo(n) {
-   return Number.isInteger(Math.log2(n));
+  return Number.isInteger(Math.log2(n));
 }
 
 /**
@@ -344,7 +344,7 @@ function isPowerOfTwo(n) {
  *   Math.PI / 2 => 1
  */
 function getSine(n) {
-   return Math.sin(n);
+  return Math.sin(n);
 }
 
 /**
@@ -359,7 +359,7 @@ function getSine(n) {
  * 2, 2    => '10'
  */
 function numberToStringInBase(/* number, base */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -373,7 +373,7 @@ function numberToStringInBase(/* number, base */) {
  * 12345, 2    => '1.23e+4'
  */
 function toExponential(/* number, fractionDigits */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -388,7 +388,7 @@ function toExponential(/* number, fractionDigits */) {
  * 12.345, 1   => '12.3'
  */
 function toFixed(/* number, fractionDigits */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -404,7 +404,7 @@ function toFixed(/* number, fractionDigits */) {
  * 12.345, 4   => '12.35'
  */
 function toPrecision(/* number, precision */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -418,7 +418,7 @@ function toPrecision(/* number, precision */) {
  * Number(-5)    => -5
  */
 function getNumberValue(n) {
-   return n.valueOf();
+  return n.valueOf();
 }
 
 /**
@@ -437,7 +437,7 @@ function getNumberValue(n) {
  * '5'      => false
  */
 function isNumber(n) {
-   return Number.isFinite(n);
+  return Number.isFinite(n);
 }
 
 /**
@@ -452,7 +452,7 @@ function isNumber(n) {
  * '5'  => false
  */
 function isInteger(/* number */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -466,7 +466,7 @@ function isInteger(/* number */) {
  * 'abcdefgh'      => NaN
  */
 function getFloatOnString(/* str */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -484,7 +484,7 @@ function getFloatOnString(/* str */) {
  * '10', 8              => 8
  */
 function getIntegerOnString(/* str, base */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -499,7 +499,7 @@ function getIntegerOnString(/* str, base */) {
  * 2 ** 53  => false
  */
 function isSafeInteger(/* number */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -513,7 +513,7 @@ function isSafeInteger(/* number */) {
  * -5.1 => -6
  */
 function roundToSmallestInteger(n) {
-   return Math.floor(n);
+  return Math.floor(n);
 }
 
 /**
@@ -527,7 +527,7 @@ function roundToSmallestInteger(n) {
  * -5.9 => -5
  */
 function roundToLargestInteger(n) {
-   return Math.ceil(n);
+  return Math.ceil(n);
 }
 
 /**
@@ -542,7 +542,7 @@ function roundToLargestInteger(n) {
  * -5.5 => -5
  */
 function roundToNearestInteger(n) {
-   return Math.round(n);
+  return Math.round(n);
 }
 
 /**
@@ -557,7 +557,7 @@ function roundToNearestInteger(n) {
  * -5.5 => -5
  */
 function getIntegerPartNumber(/* number */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -573,7 +573,7 @@ function getIntegerPartNumber(/* number */) {
  * 0.1, 0.2, 0.3 => 0.6
  */
 function getSumOfNumbers(/* x1, x2, x3 */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -589,7 +589,7 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
  * 0, 5   => 5
  */
 function getMaxNumber(f, s) {
-   return Math.max(f, s);
+  return Math.max(f, s);
 }
 
 /**
@@ -605,7 +605,7 @@ function getMaxNumber(f, s) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-   return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -619,7 +619,7 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(/* a, b */) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -636,52 +636,52 @@ function getHypotenuse(/* a, b */) {
  * 15 => 8
  */
 function getCountOfOddNumbers(n) {
-   let c = 0;
-   const m = Math.abs(n);
+  let c = 0;
+  const m = Math.abs(n);
 
-   for (let i = 0; i <= m; i += 1) {
-      c += i % 2;
-   }
+  for (let i = 0; i <= m; i += 1) {
+    c += i % 2;
+  }
 
-   return c;
+  return c;
 }
 
 module.exports = {
-   getRectangleArea,
-   getCircleCircumference,
-   getAverage,
-   getDistanceBetweenPoints,
-   getLinearEquationRoot,
-   getAngleBetweenVectors,
-   getLastDigit,
-   parseNumberFromString,
-   getParallelepipedDiagonal,
-   roundToPowerOfTen,
-   isPrime,
-   toNumber,
-   getCube,
-   getFibonacciNumber,
-   getSumToN,
-   getSumOfDigits,
-   isPowerOfTwo,
-   getSine,
-   numberToStringInBase,
-   isSafeInteger,
-   roundToLargestInteger,
-   roundToSmallestInteger,
-   roundToNearestInteger,
-   getSumOfNumbers,
-   isNumber,
-   isInteger,
-   toExponential,
-   toFixed,
-   toPrecision,
-   getNumberValue,
-   getFloatOnString,
-   getIntegerOnString,
-   getIntegerPartNumber,
-   getMaxNumber,
-   getRandomInteger,
-   getHypotenuse,
-   getCountOfOddNumbers,
+  getRectangleArea,
+  getCircleCircumference,
+  getAverage,
+  getDistanceBetweenPoints,
+  getLinearEquationRoot,
+  getAngleBetweenVectors,
+  getLastDigit,
+  parseNumberFromString,
+  getParallelepipedDiagonal,
+  roundToPowerOfTen,
+  isPrime,
+  toNumber,
+  getCube,
+  getFibonacciNumber,
+  getSumToN,
+  getSumOfDigits,
+  isPowerOfTwo,
+  getSine,
+  numberToStringInBase,
+  isSafeInteger,
+  roundToLargestInteger,
+  roundToSmallestInteger,
+  roundToNearestInteger,
+  getSumOfNumbers,
+  isNumber,
+  isInteger,
+  toExponential,
+  toFixed,
+  toPrecision,
+  getNumberValue,
+  getFloatOnString,
+  getIntegerOnString,
+  getIntegerPartNumber,
+  getMaxNumber,
+  getRandomInteger,
+  getHypotenuse,
+  getCountOfOddNumbers,
 };
